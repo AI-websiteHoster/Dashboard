@@ -1,0 +1,232 @@
+header{
+	margin: auto;
+	padding: 0px;
+	background-color: black;
+	font-size: 40px;
+	color: cyan;
+	font-family: courier,monospace;
+	font-weight:bolder;
+	animation-fill-mode: forwards;
+      animation-name: headeranimation;
+      animation-duration: 3s;
+}
+
+@keyframes headeranimation{
+	0% {opacity: 0.3}
+    100% {opacity: 1; 
+		text-shadow:0 0 1px #15f4ee,
+      				0 0 4px #15f4ee,
+      				0 0 16px #15f4ee,
+      				0 0 36px #00ffff,
+      				0 0 76px #00ffff,
+      				0 0 86px #00ffff,
+      				0 0 96px #00ffff,
+      				0 0 145px #00ffff;}
+}
+
+
+body{
+	background-color: gray;
+	font-family: Helvetica,sans-serif;
+	font-size: 10px;
+	min-width:450px;
+	min-height:300px;
+}
+
+/*Icon Shortcuts*/
+
+.fa:hover{
+	opacity:0.6
+}
+
+.fa-whatsapp{
+	left:-3px;
+	margin-bottom:5px;
+	/* background-color:white; */
+	position:relative;
+}
+.fa-discord{
+	position:relative;
+	left: -5px;
+	/* background-color:white; */
+}
+.fa-instagram{
+	left:0px;
+	/* background-color:gray;  */
+}
+.fa-youtube{
+	left: 0px;
+	/* background-color:gray;  */
+}
+.fa-spotify{
+	margin-top:10px;
+}
+
+.sidebar{
+	animation-name: sideanimation;
+	animation-duration: 3s;
+	display:grid;
+	padding:10px;
+	width:80px;
+	position:fixed;
+	top:0px;
+}
+
+@keyframes sideanimation{
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+
+/*particle animation*/
+
+/*input*/
+#input-div{
+	position:absolute;
+	right:0px;
+	top:67px;
+	width:80%;
+}
+
+input[type="text"]{
+	background-color:whitesmoke;
+	color:black;
+	width:65%;
+	font-family:cursive;
+	border:whitesmoke 2px solid;
+	border-radius:10px;
+	border-bottom-right-radius: 0px;
+	border-top-right-radius:0px;
+	height:20px;
+	padding:10px;
+	opacity:1;
+	animation-name: sideanimation;
+	animation-duration: 3s;
+}
+
+/*code below not working*/
+#input-el:focus{
+	outline:none;
+	border:cyan 2px solid;
+}
+
+input:hover{
+    border: 2px solid cyan;
+}
+
+#input-btn{
+	background-color: cyan;
+	position:absolute;
+	color:black;
+	font-weight:bold;
+	font-family: "Gill Sans", sans-serif;
+	width:25.8%;
+	height:44px;
+	border:cyan 2px solid;
+	border-radius: 10px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	right:10px;
+	cursor:pointer;
+	animation-name: sideanimation;
+	animation-duration: 3s;
+}
+
+#tab-btn{
+	background-color:rgb(148, 16, 16);
+	opacity:0.8;
+	color:black;
+	border:orangered 2px solid;
+	width:50px;
+	height:50px;
+	border-radius:20%;
+	position:absolute;
+	top:60px;
+	right:10px;
+	overflow:hidden;
+	cursor:pointer;
+	display:flex;
+	justify-content:center;
+	animation-name: deleteanimation;
+	animation-duration: 1.5s;
+}
+
+#delete-btn{
+	background-color:rgb(148, 16, 16);
+	opacity:0.8;
+	position:absolute;
+	top:120px;
+	color:black;
+	font-weight:bold;
+	width:50px;
+	height:44px;
+	border:orangered 2px solid;
+	border-radius: 20%;
+	right:10px;
+	cursor:pointer;
+	justify-content:center;
+	animation-name: deleteanimation;
+	animation-duration: 1.5s;
+}
+
+@keyframes deleteanimation{
+	0% {opacity: 0}
+	100% {opacity: 0.8}
+}
+
+#delete-btn:hover{
+	opacity:1;
+}
+
+#tab-btn:hover{
+	opacity:1;
+}
+
+#bin{
+	margin:auto;
+	padding:0px;
+}
+
+#bookmark{
+	margin-top:4px;
+}
+
+#ul-container{
+	border:#00ffff 2px solid;
+	border-radius:10px;
+	padding-left:10px;
+	margin-top:15px;
+	width:75%;
+	overflow:hidden;
+	animation-name: sideanimation;
+	animation-duration: 3s;
+}
+
+#ul-el{
+	list-style:none;
+	padding-left:0;
+	color:#00ffff;
+	font-family:emoji;
+}
+
+li{
+	margin-top:5px;
+	font-size:16px;
+}
+
+#ul-el a{
+	color:#00ffff;
+}
+
+
+/*media queries*/
+@media screen and (max-width:1000px){
+	body{
+		background-color:black;
+	}
+	#ul-el{
+		list-style:none;
+		padding-left:0;
+		color:#00ffff;
+		font-size:12px;
+	}
+}
